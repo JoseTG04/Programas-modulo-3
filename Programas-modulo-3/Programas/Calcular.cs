@@ -13,10 +13,10 @@
 
             try
             {
-                Console.WriteLine("Digite el primer número entero: ");
+                Console.WriteLine("Digite el primer número: ");
                 num1 = Convert.ToDecimal(Console.ReadLine());
 
-                Console.WriteLine("Digite el segundo número entero: ");
+                Console.WriteLine("Digite el segundo número: ");
                 num2 = Convert.ToDecimal(Console.ReadLine());   
 
                 if (num1 > num2)
@@ -55,8 +55,81 @@
                 Console.WriteLine($"Ha ocurrido el siguiente error: {ex.Message} al realizar las operaciones");
                              
             }
+                       
+                     
+        }
+
+        public void ComprobarNota()
+        {
+            int num1 = 0;
+            int num2 = 0;
+            int num3 = 0;
+            int promedio = 0;
+
+            try
+            {
+                Console.WriteLine("Digite el primer número: ");
+                num1 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Digite el segundo número: ");
+                num2 = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Digite el primer número: ");
+                num3 = Convert.ToInt32(Console.ReadLine());
+
+                promedio = (num1 + num2 + num3) / 3;
+
+                if (promedio >= 7)
+                {
+                    Console.WriteLine("Promocionado");
+                    Console.WriteLine($"Su calificación es: {promedio}");
+                }
+                else
+                {
+                    Console.WriteLine("Lamentable el alumno no aprobó");
+                    Console.WriteLine($"Su calificación es: {promedio}");
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine($"Ha ocurrido el siguiente error: {ex.Message} al promediar las notas");
+            }
             
+
+        }
+
+        public void ComprobarDigitos()
+        {
+            int num1 = 0;
+
+
+            try
+            {
+                Console.WriteLine("Digite un número entero positivo del 1 al 99");
+                num1 = Convert.ToInt32(Console.ReadLine());
+
+                if (num1 < 10)
+                {
+                    Console.WriteLine("El número ingresado tiene un dígito");
+                }
+                else if (num1 > 99)
+                {
+                    Console.WriteLine($"El número ingresado: {num1} no es válido");
+                }
+                else
+                {
+                    Console.WriteLine("El número ingresado tienes dos dígitos");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine($"Ha ocurrido el siguiente error: {ex.Message} al comprobar los dígitos");
+            }
             
+
         }
     }
 }

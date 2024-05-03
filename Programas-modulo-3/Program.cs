@@ -2,4 +2,8 @@
 
 Calcular operaciones = new Calcular();
 
-operaciones.OperacionesCondicionadas();
+//operaciones.OperacionesCondicionadas();
+
+//operaciones.ComprobarNota();
+
+operaciones.ComprobarDigitos();
